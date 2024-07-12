@@ -54,7 +54,7 @@ public class FileController {
 	
 	
 	// download File
-	@GetMapping("/download-file/{fileName}")
+	@GetMapping(value = "/download-file/{fileName}", produces = MediaType.IMAGE_JPEG_VALUE)
 	public void downloadFile(@PathVariable String fileName, HttpServletResponse response) throws IOException {
 		
 		// calling the service and getting the file as InputStream
