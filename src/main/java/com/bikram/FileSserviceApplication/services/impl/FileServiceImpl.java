@@ -40,7 +40,7 @@ public class FileServiceImpl implements FileService {
 			f.mkdir();	// create folder
 		}
 		
-		// save the file into the folder
+		// save the file into the folder (completeFilePath - ../images/xyz.png'') : storing the file into the 'completeFilePath' : the new file name comes from the 'completeFilePath'
 		Files.copy(file.getInputStream(), Paths.get(completeFilePath));
 		
 		// return original file name
